@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>バリオンガチャ</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>バリオンガチャ</h1>
+    <h2>クォークを3つそろえてバリオンを作りましょう！</h2>
+    <p>諸々ハードモードになっています。心が折れかけたら<a href='https://aki-cast.github.io/baryon_gacha/'>ver.0の方</a>をプレイしてください。</p>
+    <div id="result" class="item-container">
+        <div class="item"><img src="ItemA.jpg" alt="アイテム1"></div>
+        <div class="item"><img src="ItemA.jpg" alt="アイテム2"></div>
+        <div class="item"><img src="ItemA.jpg" alt="アイテム3"></div>
+    </div>
+    <button id="spinButton">ガチャを引く</button>
+    <h2><a href="https://forms.gle/87Qxq5ZLCT3Ufwkr6">アンケート</a>にご意見やご感想をお寄せください</h2>
+ <!-- カウンターを表示する要素 -->
+<div class="result-count">
+    <div class="counter-box">
+        <div class="counter-bg summary0-bg">
+            <span class="counter-text" id="summary0Count">0</span>
+        </div>
+        <p>ゲットならず</p>
+    </div>
+    <div class="counter-box">
+        <div class="counter-bg summary1-bg">
+            <span class="counter-text" id="summary1Count">0</span>
+        </div>
+        <p>uuu：デルタ粒子</p>
+    </div>
+    <div class="counter-box">
+        <div class="counter-bg summary2-bg">
+            <span class="counter-text" id="summary2Count">0</span>
+        </div>
+        <p>uud:陽子</p>
+    </div>
+    <div class="counter-box">
+        <div class="counter-bg summary3-bg">
+            <span class="counter-text" id="summary3Count">0</span>
+        </div>
+        <p>uus:シグマハイペロン</p>
+    </div>
+    <!-- コードA（上記のコード）の後に以下のコードを追加 -->
+
+<div class="counter-box">
+    <div class="counter-bg summary4-bg">
+        <span class="counter-text" id="summary4Count">0</span>
+    </div>
+    <p>uuc:チャームドシグマ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary5-bg">
+        <span class="counter-text" id="summary5Count">0</span>
+    </div>
+    <p>uub:ボトムシグマ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary6-bg">
+        <span class="counter-text" id="summary6Count">0</span>
+    </div>
+    <p>udd:中性子</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary7-bg">
+        <span class="counter-text" id="summary7Count">0</span>
+    </div>
+    <p>uds:ラムダ0</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary8-bg">
+        <span class="counter-text" id="summary8Count">0</span>
+    </div>
+    <p>udc:チャームドラムダ+</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary9-bg">
+        <span class="counter-text" id="summary9Count">0</span>
+    </div>
+    <p>udb:ボトムラムダ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary10-bg">
+        <span class="counter-text" id="summary10Count">0</span>
+    </div>
+    <p>uss:中性カスケードハイペロン</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary11-bg">
+        <span class="counter-text" id="summary11Count">0</span>
+    </div>
+    <p>usc:チャームドグザイ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary12-bg">
+        <span class="counter-text" id="summary12Count">0</span>
+    </div>
+    <p>usb:ボトムグザイ粒子</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary13-bg">
+        <span class="counter-text" id="summary13Count">0</span>
+    </div>
+    <p>ucc:ダブルチャームドグザイ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary14-bg">
+        <span class="counter-text" id="summary14Count">0</span>
+    </div>
+    <p>ucb:チャームドボトムグザイ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary15-bg">
+        <span class="counter-text" id="summary14Count">0</span>
+    </div>
+    <p>ubb:ダブルボトムグザイ</p>
+</div>
+
+<div class="counter-box">
+    <div class="counter-bg summary16-bg">
+        <span class="counter-text" id="summary16Count">0</span>
+    </div>
+    <p>ddd:デルタ粒子-</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary17-bg">
+        <span class="counter-text" id="summary17Count">0</span>
+    </div>
+    <p>dds:シグマ粒子</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary18-bg">
+        <span class="counter-text" id="summary18Count">0</span>
+    </div>
+    <p>ddc:チャームドシグマ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary19-bg">
+        <span class="counter-text" id="summary19Count">0</span>
+    </div>
+    <p>ddb:ボトムシグマ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary20-bg">
+        <span class="counter-text" id="summary20Count">0</span>
+    </div>
+    <p>dss:グザイマイナス粒子</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary21-bg">
+        <span class="counter-text" id="summary21Count">0</span>
+    </div>
+    <p>dsc:チャームドグザイ粒子</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary22-bg">
+        <span class="counter-text" id="summary22Count">0</span>
+    </div>
+    <p>dsb:カスケードB粒子</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary23-bg">
+        <span class="counter-text" id="summary23Count">0</span>
+    </div>
+    <p>dcc:ダブルチャームドグザイ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary24-bg">
+        <span class="counter-text" id="summary24Count">0</span>
+    </div>
+    <p>dcb:チャームドボトムグザイ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary25-bg">
+        <span class="counter-text" id="summary25Count">0</span>
+    </div>
+    <p>dbb:ダブルボトムグザイ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary26-bg">
+        <span class="counter-text" id="summary26Count">0</span>
+    </div>
+    <p>ddd:デルタ粒子-</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary27-bg">
+        <span class="counter-text" id="summary27Count">0</span>
+    </div>
+    <p>ssc:チャームドオメガ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary28-bg">
+        <span class="counter-text" id="summary28Count">0</span>
+    </div>
+    <p>ssb:ボトムオメガ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary29-bg">
+        <span class="counter-text" id="summary29Count">0</span>
+    </div>
+    <p>scc:ダブルチャームドオメガ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary30-bg">
+        <span class="counter-text" id="summary30Count">0</span>
+    </div>
+    <p>scb:チャームドボトムオメガ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary31-bg">
+        <span class="counter-text" id="summary31Count">0</span>
+    </div>
+    <p>sbb:ダブルボトムオメガ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary32-bg">
+        <span class="counter-text" id="summary32Count">0</span>
+    </div>
+    <p>ccc:トリプルチャームドオメガ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary33-bg">
+        <span class="counter-text" id="summary33Count">0</span>
+    </div>
+    <p>ccb:ダブルチャームドボトムオメガ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary34-bg">
+        <span class="counter-text" id="summary34Count">0</span>
+    </div>
+    <p>cbb:チャームドダブルボトムオメガ</p>
+</div>
+<div class="counter-box">
+    <div class="counter-bg summary35-bg">
+        <span class="counter-text" id="summary35Count">0</span>
+    </div>
+    <p>bbb:トリプルボトムオメガ</p>
+</div>
+
+
+</div>
+
+
+<div class="column">
+    <h3>クォークについて</h3>
+    <img src="quarks.jpg" alt="quarksdescription"> 
+    <p>
+        宇宙や物質の最小の構成要素であると現在考えられているのは「素粒子」です。素粒子には物質を構成する「クォーク」と「レプトン」がそれぞれ6種類ずつ、
+        力を伝える「ゲージ粒子」が4種類、質量を作る「ヒッグス粒子」が1種類あり、合計で17種類あります。
+        ここで、物質を構成する粒子のうち、強い相互作用をして、核子になるものを「クォーク」、強い相互作用をせず、単独で存在できるものを「レプトン」と呼びます。
+        クォークは質量ごとに「世代」が決まっており、軽いものから順に、第一世代、第二世代、第三世代と呼ばれます。私たちの身の回りの原子核の中にあるのは基本的に第一世代のクォークからなる核子で、
+        質量の大きなクォークを作るには大きなエネルギーが必要です。
+        また、クォークは2種類の電荷をもちます。電子の持つ電荷を-1としたときに+2/3の電荷を持つのがアップクォーク、チャームクォーク、トップクォークで、
+        -1/3の電荷を持つのがダウンクォーク、ストレンジクォーク、ボトムクォークです。
+        クォークがいくつかくっついてできたものを「ハドロン」、特に、クォークが三つ集まってできたものを「バリオン」と呼びます。
+        このガチャではランダムに3つのクォークを引いて、さまざまなバリオンを作りましょう。質量が大きく不安定な世代のクォークほど出現率が小さくなるように設定されています。
+    </p>
+</div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div id="myModalContent"></div>
+            <span id="closeModalBtn" class="close">×とじる</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

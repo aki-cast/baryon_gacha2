@@ -1,0 +1,221 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+}
+
+
+
+.item-container {
+    display: flex; /* Flexコンテナにする */
+    justify-content: space-between; /* アイテムを均等に配置 */
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    gap: 8px;
+}
+
+.item {
+    flex: 1; /* 空白スペースを均等に分割 */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.item img {
+    max-width: 50%;
+    height: auto;
+}
+
+button {
+    padding: 20px 40px; /* 大きなボタン */
+    background-color:#F29F05;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 30px; /* フォントサイズを大きく設定 */
+    margin-bottom: 20px; 
+}
+
+button:hover {
+    background-color: #F20505; /* ホバー時の背景色 */
+}
+
+/* モーダルウィンドウのスタイル */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* モーダルウィンドウのコンテンツのスタイル */
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 18px; /* 枠を内側に調整 */
+    max-width: 60%;
+    border: 6px solid #F29F05; /* 赤色の枠線を追加 */
+    border-radius: 5px;
+    position: relative;
+    max-height: 80vh; /* 画面の高さの80%まで表示 */
+    overflow: auto; /* コンテンツがはみ出た場合にスクロール可能に */
+    display: flex;
+    flex-direction: column; /* コンテンツを縦方向に配置 */
+    justify-content: space-between; /* コンテンツを上下に均等に配置 */
+}
+
+.modal-content img{
+    float: left;
+    margin-right: 20px;
+    max-width: 30%; /* 画像の最大幅を設定 */
+    border-radius: 5px; /* 画像を角丸にする */
+}
+
+
+/* 閉じるボタンのスタイル */
+.close {
+    /* 他のスタイルを保持したまま、テキストのスタイルを追加 */
+    margin: 10px auto; /* 上下に余白を追加して中央配置 */
+    padding: 10px 20px; /* ボタンの大きさを調整（縦方向と横方向） */
+    cursor: pointer;
+    font-size: 20px; /* テキストのフォントサイズを設定 */
+    color: #F29F05; /* テキストの色を設定 */
+    border: 2px solid #F29F05; /* 緑の線でボタンを囲む */
+    border-radius: 5px; /* ボタンを長方形にする */
+    align-self: center; /* ボタンを中央に配置 */
+    border-radius: 4px;
+}
+
+.star-yellow {
+    color: gold; /* テキストカラーを透明に設定 */
+    font-size: 30px;
+    margin-right: 5px;
+    border-radius: 50%; /* 角を丸める */
+}
+
+.star-gray {
+    color: gray;
+    font-size: 30px;
+    margin-right: 5px;
+    border-radius: 50%; /* 角を丸める */
+}
+
+/* カウンターのスタイル */
+.result-count {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap; /* ブロックが画面幅に合わせて改行される */
+}
+
+
+.counter-box {
+    flex-basis: calc(15% - 20px); /* 統一的な幅を設定 */
+    text-align: center;
+    border: 1px solid #333; /* 長方形の枠を追加 */
+    border-radius: 5px; /* 枠の角を丸くする */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* カウンターブロックのスタイル */
+.counter-bg {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 各結果のカウンター背景のスタイル */
+.summary1-bg { background-color: #05AFF2; }
+.summary2-bg { background-color: #0644BF; }
+.summary3-bg { background-color: #05AFF2; }
+.summary4-bg { background-color: #F2E313; }
+.summary5-bg { background-color: #F29F05; }
+.summary6-bg { background-color: #0644BF; }
+.summary7-bg { background-color: #05AFF2; }
+.summary8-bg { background-color: #05AFF2; }
+.summary9-bg { background-color: #F2E313; }
+.summary10-bg { background-color: #F2E313; }
+.summary11-bg { background-color: #F2E313; }
+.summary12-bg { background-color: #F2E313; }
+.summary13-bg { background-color: #F2E313; }
+.summary14-bg { background-color: #F29F05; }
+.summary15-bg { background-color: #F29F05; }
+.summary16-bg { background-color: #05AFF2; }
+.summary17-bg { background-color: #05AFF2; }
+.summary18-bg { background-color: #05AFF2; }
+.summary19-bg { background-color: #F2E313; }
+.summary20-bg { background-color: #F2E313; }
+.summary21-bg { background-color: #F2E313; }
+.summary22-bg { background-color: #F2E313; }
+.summary23-bg { background-color: #F2E313; }
+.summary24-bg { background-color: #F29F05; }
+.summary25-bg { background-color: #F29F05; }
+.summary26-bg { background-color: #F2E313; }
+.summary27-bg { background-color: #F2E313; }
+.summary28-bg { background-color: #F2E313; }
+.summary29-bg { background-color: #F29F05; }
+.summary30-bg { background-color: #F29F05; }
+.summary31-bg { background-color: #F29F05; }
+.summary32-bg { background-color: #F29F05; }
+.summary33-bg { background-color: #F29F05; }
+.summary34-bg { background-color: #F29F05; }
+.summary35-bg { background-color: #F20505; }
+
+
+.column {
+    background-color: #fff; /* 背景色を白に設定 */
+    border: 1px solid #ccc; /* ボーダーを追加 */
+    border-radius: 10px; /* 角丸 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* 影を追加 */
+    padding: 20px; /* パディングを追加 */
+    margin-top: 20px; /* 上部の余白を設定 */
+    text-align: left; /* テキストを左揃えに設定 */
+}
+
+.column h3 {
+    font-size: 24px; /* タイトルのフォントサイズを大きくする */
+    margin-bottom: 10px; /* タイトル下部の余白を追加 */
+    color: #333; /* タイトルの文字色を設定 */
+}
+
+.column p {
+    font-size: 16px; /* 本文のフォントサイズを設定 */
+    line-height: 1.5; /* 行間を設定 */
+    color: #666; /* 本文の文字色を設定 */
+}
+
+.column img {
+    float: right;
+    margin-right: 20px;
+    max-width: 500px; /* 画像の最大幅を設定 */
+    border-radius: 5px; /* 画像を角丸にする */
+}
+
+@media screen and (max-width: 768px) {
+    /* ここにスマートフォン用のスタイルを指定 */
+.column img {
+    float: center;
+    max-width: 100%; /* 画像の最大幅を設定 */
+    border-radius: 5px; /* 画像を角丸にする */
+}
+}
