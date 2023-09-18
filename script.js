@@ -3,8 +3,8 @@ const items = [
     { name: "Item2", image: "Item2.jpg", probability: 0.4 },
     { name: "Item3", image: "Item3.jpg", probability: 0.06 },
     { name: "Item4", image: "Item4.jpg", probability: 0.03 },
-    { name: "Item5", image: "Item5.jpg", probability: 0.001 },
-    { name: "Item6", image: "Item6.jpg", probability: 0.009 }
+    { name: "Item5", image: "Item6.jpg", probability: 0.009 },
+    { name: "Item6", image: "Item5.jpg", probability: 0.001 }
 ];
 let summary0Counter = 0;
 let summary1Counter = 0;
